@@ -87,7 +87,7 @@ export const TrackingProvider = ({children}) => {
         const {receiver, index } = completeShip;
 
         try {
-            if(!window.etherum) return "install metamask";
+            if(!window.ethereum) return "install metamask";
 
             const accounts = await window.ethereum.request({
                 method: "eth_accounts",
@@ -126,7 +126,7 @@ export const TrackingProvider = ({children}) => {
             });
            const provider = new ethers.providers.JsonRpcProvider();
            const Contract = fetchContract(provider);
-           const shipment = await contract.getShipment(accounts[0], index*1); 
+           const shipment = await Contract.getShipment(accounts[0], index*1); 
 
            const SingleShipment = {
             sender: shipment[0],
