@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Services = ({
   setOpenProfile,
-  setCompleteModel,
-  setGetModel,
+  setCompleteModal,
+  setGetModal,
   setStartModal
 }) => {
   const team = [
@@ -30,9 +30,9 @@ const Services = ({
 
   const openModelBox = (text) => {
     if (text === 1) {
-      setCompleteModel(true);
+      setCompleteModal(true);
     } else if (text === 2) {
-      setGetModel(true);
+      setGetModal(true);
     } else if (text === 3) {
       setStartModal(true);
     } else if (text === 4) {

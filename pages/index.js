@@ -7,11 +7,12 @@ import{
     Form,
     Services,
     Profile,
-    CompleteShipment,
     GetShipment,
     StartShipment,
     Navbar,
 } from "../Components"
+
+import CompleteShipment from '../Components/CompleteShipment'
 
 import { TrackingContext } from '@/Context/Tracking'
 
