@@ -10,6 +10,7 @@ import{
     GetShipment,
     StartShipment,
     Navbar,
+    Footer,
 } from "../Components"
 
 import CompleteShipment from '../Components/CompleteShipment'
@@ -58,6 +59,8 @@ const index = () => {
             <CompleteShipment completeModal={completeModal} setCompleteModal={setCompleteModal} completeShipment ={completeShipment} />
             <GetShipment getModal={getModal} setGetModal={setGetModal} getShipment={GetShipment} />
             <StartShipment startModal={startModal} setStartModal={setStartModal} startShipment={startShipment} />
+            <Footer/>
+
 
         </>
     )

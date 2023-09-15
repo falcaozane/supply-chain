@@ -90,7 +90,7 @@ export default () => {
               {currentUser ? (
                 <>
                   <span>{currentUser.slice(0, 25)}..</span>
-                  <ArrowLeftOnRectangleIcon className="h-4 w-4" />
+                  <ArrowLeftOnRectangleIcon className="h-4 w-4" />  
                 </>
               ) : (
                 <>
