@@ -27,9 +27,9 @@ export default ()=>{
   return(
     <nav className={`bg-white pb-5 md:text-sm ${state? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0": ""}`}>
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-        <div className="flex items-center justify-between py-5 md:block">
+        <div className="flex items-center justify-between  md:block">
           <a href="javascript:void(0)">
-            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" width={120} height={50} alt="BroCode Logo" />
+            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"  className='w-14 h-14' alt="BroCode Logo" />
   
           </a>
 
