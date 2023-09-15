@@ -1,7 +1,7 @@
 import images from '../Images/index.js';
 import Image from "next/image";
 
-const TeamComponent = ({
+const Services = ({
   setOpenProfile,
   setCompleteModel,
   setGetModel,
@@ -46,8 +46,8 @@ const TeamComponent = ({
         <div className='mt-12'>
           <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3'>
               {team.map((item, i) => (
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li key={i}>
+                <ul key={i} style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  <li>
                     <div
                       onClick={() => openModelBox(i + 1)}
                       className='w-full h-60 sm:h-52 md:h-56'
@@ -68,4 +68,4 @@ const TeamComponent = ({
   );
 };
 
-export default TeamComponent;
+export default Services;
