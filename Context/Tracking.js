@@ -54,7 +54,7 @@ export const TrackingProvider = ({children}) => {
             const allShipments = shipments.map((shipment) => ({
                 sender: shipment.sender,
                 receiver: shipment.receiver,
-                price: ethers.utlis.formatEther(shipmsnt.price.toString()),
+                price: ethers.utlis.formatEther(shipment.price.toString()),
                 pickupTime: shipment.pickupTime.toNumber(),
                 deliveryTime: shipment.deliveryTime.toNumber(),
                 distance: shipment.distance.toNumber(),
