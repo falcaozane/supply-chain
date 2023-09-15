@@ -5,7 +5,7 @@ const Services = ({
   setOpenProfile,
   setCompleteModel,
   setGetModel,
-  setStartModel
+  setStartModal
 }) => {
   const team = [
     {
@@ -34,7 +34,7 @@ const Services = ({
     } else if (text === 2) {
       setGetModel(true);
     } else if (text === 3) {
-      setStartModel(true);
+      setStartModal(true);
     } else if (text === 4) {
       setOpenProfile(true);
     }
