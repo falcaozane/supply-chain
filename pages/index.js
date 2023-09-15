@@ -34,7 +34,7 @@ const index = () => {
     const [openProfile, setOpenProfile] = useState(false)
     const [startModal, setStartModal] = useState(false)
     const [completeModal, setCompleteModal] = useState(false)
-    const [getModel, setGetModel] = useState(false)
+    const [getModal, setGetModal] = useState(false)
 
     //DATA STATE VARIABLE
     const [allShipmentsdata, setAllShipmentsdata] = useState()
@@ -51,12 +51,12 @@ const index = () => {
     return (
         <>  
             <Navbar/>
-            <Services setOpenProfile={setOpenProfile} setCompleteModal={setCompleteModal} setGetModel={setGetModel} setStartModal={setStartModal} />
+            <Services setOpenProfile={setOpenProfile} setCompleteModal={setCompleteModal} setGetModal={setGetModal} setStartModal={setStartModal} />
             <Table setCreateShipmentModel={setCreateShipmentModel} allShipmentsdata={allShipmentsdata}  />
             <Form createShipmentModel={createShipmentModel} createShipment={createShipment} setCreateShipmentModel={setCreateShipmentModel} />
             <Profile openProfile={openProfile} setOpenProfile={setOpenProfile} currentUser={currentUser} getShipmentsCount={getShipmentsCount} />
             <CompleteShipment completeModal={completeModal} setCompleteModal={setCompleteModal} completeShipment ={completeShipment} />
-            <GetShipment getModel={getModel} setGetModel={setGetModel} getShipment={GetShipment} />
+            <GetShipment getModal={getModal} setGetModal={setGetModal} getShipment={GetShipment} />
             <StartShipment startModal={startModal} setStartModal={setStartModal} startShipment={startShipment} />
 
         </>
