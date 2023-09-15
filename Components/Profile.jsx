@@ -93,12 +93,12 @@ export default ({ openProfile, setOpenProfile, currentUser, getShipmentsCount, g
   useEffect(() => {
     const fetchData = async () => {
       // Fetch the wallet balance
-      const userBalance = await getBalance(currentUser);
+      //const userBalance = await getBalance(currentUser);
 
       // Fetch the shipment count
       const shipmentsCount = await getShipmentsCount();
 
-      setBalance(userBalance);
+      //setBalance(userBalance);
       setCount(shipmentsCount);
     };
 

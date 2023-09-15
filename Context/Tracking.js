@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from "react";
-import { Web3Modal } from "@web3modal/react";
+import Web3Modal from "@web3modal/react";
 import { ethers } from "ethers";
+import { JsonRpcProvider } from "ethers/providers";
+
 
 import tracking from "../Context/Tracking.json";
 const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+
 
 const ContractABI = tracking.abi;
 
@@ -19,10 +22,10 @@ export const TrackingProvider = ({children}) => {
     const createShipment = async (items) => {
         console.log(items);
         const {receiver, pickupTime, distance, price} = items;
-
+        
         try {
-            const web3modal = new web3modal();
-            const connection = await web3modal.connect();
+            const web3Modal = new Web3Modal();
+            const connection = await web3Modal.connect();
             const provider = new ethers.providers.web3Provider(connection);
             const signer = provider.getsigner();
             const contract = fetchContract(signer);
@@ -47,7 +50,11 @@ export const TrackingProvider = ({children}) => {
     const getAllShipment = async () =>
      {
         try {
+            console.log(ethers, "provider");
             const provider = new ethers.provider.JsonRpcProvider();
+            
+            //const provider = new JsonRpcProvider();
+            
             const contract = fetchContract(provider);
 
             const shipments = await contract.getAllTransactions();
@@ -211,6 +218,7 @@ export const TrackingProvider = ({children}) => {
         }
     };
 
+    /*
     const disconnectWallet = async () => {
         try {
           if (!window.ethereum) return "Install MetaMask";
@@ -229,7 +237,7 @@ export const TrackingProvider = ({children}) => {
           console.log("Error disconnecting wallet", error);
         }
       };
-
+    */
     useEffect(()=> {
         checkIfWalletConnected();
     },[]);
@@ -238,7 +246,7 @@ export const TrackingProvider = ({children}) => {
         < TrackingContext.Provider
           value={{
             connectWallet,
-            disconnectWallet,
+            //disconnectWallet,
           createShipment,
           getAllShipment,
           completeShipments,
