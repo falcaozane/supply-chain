@@ -59,7 +59,7 @@ export const TrackingProvider = ({children}) => {
                 deliveryTime: shipment.deliveryTime.toNumber(),
                 distance: shipment.distance.toNumber(),
                 ispaid: shipment.ispaid,
-                status: shipment.ststus,
+                status: shipment.status,
             }));
             return allShipments;
         }
