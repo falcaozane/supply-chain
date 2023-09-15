@@ -2,7 +2,7 @@ import React from 'react'
 import {useEffect, useState, useContext} from "react"
 
 import { TrackingContext } from '@/Context/Tracking'
-import { BeakerIcon, Bars3Icon, ArrowRightOnRectangleIcon, WalletIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, ArrowRightOnRectangleIcon, WalletIcon } from '@heroicons/react/24/solid'
 
 export default ()=>{
 
@@ -35,7 +35,8 @@ export default ()=>{
 
           <div className="md:hidden">
             <button className='menu-btn text-gray-500 hover:text-gray-800' onClick={()=> setState(!state)}>
-              {state ?<Bars3Icon className=''></Bars3Icon>: <ArrowRightOnRectangleIcon></ArrowRightOnRectangleIcon>}
+              {/* {state ?<Bars3Icon className='h-3'></Bars3Icon>: <ArrowRightOnRectangleIcon></ArrowRightOnRectangleIcon>} */}
+              <Bars3Icon className='h-5 text-black'></Bars3Icon>
             </button>
           </div>
         </div>
