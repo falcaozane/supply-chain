@@ -10,6 +10,7 @@ import{
     CompleteShipment,
     GetShipment,
     StartShipment,
+    Navbar,
 } from "../Components"
 
 import { TrackingContext } from '@/Context/Tracking'
@@ -47,7 +48,8 @@ const index = () => {
     }, [])
    
     return (
-        <>
+        <>  
+            <Navbar/>
             <Services setOpenProfile={setOpenProfile} setCompleteModal={setCompleteModal} setGetModel={setGetModel} setStartModal={setStartModal} />
             <Table setCreateShipmentModel={setCreateShipmentModel} allShipmentsdata={allShipmentsdata}  />
             <Form createShipmentModel={createShipmentModel} createShipment={createShipment} setCreateShipmentModel={setCreateShipmentModel} />
