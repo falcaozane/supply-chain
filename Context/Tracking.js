@@ -18,7 +18,7 @@ export const TrackingProvider = ({children}) => {
 
     const createShipment = async (items) => {
         console.log(items);
-        const {reciver, pickupTime, distance, price} = items;
+        const {receiver, pickupTime, distance, price} = items;
 
         try {
             const web3modal = new web3modal();
