@@ -211,13 +211,34 @@ export const TrackingProvider = ({children}) => {
         }
     };
 
+    const disconnectWallet = async () => {
+        try {
+          if (!window.ethereum) return "Install MetaMask";
+    
+          await window.ethereum.request({
+            method: "wallet_requestPermissions",
+            params: [
+              {
+                eth_accounts: {},
+              },
+            ],
+          });
+    
+          setCurrentUser(""); // Clear the currentUser state
+        } catch (error) {
+          console.log("Error disconnecting wallet", error);
+        }
+      };
+
     useEffect(()=> {
         checkIfWalletConnected();
     },[]);
 
     return (
         < TrackingContext.Provider
-          value={{connectWallet,
+          value={{
+            connectWallet,
+            disconnectWallet,
           createShipment,
           getAllShipment,
           completeShipments,
