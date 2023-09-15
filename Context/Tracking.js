@@ -55,7 +55,7 @@ export const TrackingProvider = ({children}) => {
                 sender: shipment.sender,
                 receiver: shipment.receiver,
                 price: ethers.utlis.formatEther(shipmsnt.price.toString()),
-                pickuoTime: shipment.pickupTime.toNumber(),
+                pickupTime: shipment.pickupTime.toNumber(),
                 deliveryTime: shipment.deliveryTime.toNumber(),
                 distance: shipment.distance.toNumber(),
                 ispaid: shipment.ispaid,
