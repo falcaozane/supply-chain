@@ -42,7 +42,7 @@ export default ()=>{
             </ul>
 
           </div>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <p className="text-gray-700 font-semibold">Get the app</p>
             <div className="flex items-center gap-3 mt-3 sm:block">
               <a href="/">
@@ -52,7 +52,7 @@ export default ()=>{
                 <Fot2/>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-10 py-10 border-t md:text-center">
           <p>2023 BroCode. All rights reserved.</p>
