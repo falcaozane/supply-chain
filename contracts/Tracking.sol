@@ -115,7 +115,12 @@ contract Tracking {
         return shipments[_sender].length;
     }
 
-    function getAllTransactions() public view returns (TypeShipment[] memory) {
-        return typeShipments;
+    // function getAllTransactions() public view returns (TypeShipment[] memory) {
+    //     return typeShipments;
+    // }
+    function getAllTransactions() public view returns (Shipment[] memory) {
+        return shipments[msg.sender];
     }
 }
+
+

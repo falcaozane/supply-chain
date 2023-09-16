@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import Image from './SVG/Str1'
+import { Web3Button, useWeb3Modal } from '@web3modal/react';
 
 export default ({
   setCreateShipmentModel,
   createShipmentModel,
   createShipment, 
 }) => {
+
+  const { open,close } = useWeb3Modal();
+
   const [ shipment,setShipment ] = useState({
     receiver: "",
     pickupTime: "",
@@ -15,10 +19,11 @@ export default ({
 
   const createItem = async () => {
     try {
+      open()
       await createShipment(shipment);
     } catch (error)
     {
-      console.log("Wrong creatong item");
+      console.log("Wrong creatong item", error);
     }
   };
   
@@ -82,6 +87,7 @@ export default ({
               </div>
               <button 
                 onClick={() => createItem()}
+                
                 className='block w-full mt-3 py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg ring-offset-2 ring-indigo-600 focus:ring-2'
               >Create Shipment</button>
             </form>
